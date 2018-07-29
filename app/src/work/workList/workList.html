@@ -1,0 +1,50 @@
+<ion-view class="work-list">
+  <ion-header-bar align-title="center" class="bar-positive nav-color">
+    <button menu-toggle="left"><input class="menu-button" type="image" src="images/logo/menu_ic.png" /></button>
+    <h1 class="title">DANH SÁCH CÔNG VIỆC</h1>
+  </ion-header-bar>
+  <ion-content class="has-header client" scroll="true">
+    <hr class="blue-hr">
+    <search-bar></search-bar>
+    <div class="margin list list-inset" ng-show="vm.showJobList">
+      <span ng-show="vm.workList.length < 1">Không tìm thấy</span>
+      <div class="item item-job" ng-repeat="item in vm.workList | orderBy:'-createDate'">
+        <div class="row">
+          <div class="col job-title">
+            {{item.title}}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col job-address">
+            <img class="img-marker" src="images/work/marker.png">
+            {{item.address}}
+          </div>
+        </div>
+        <div class="row">
+            <div class="col col-33">
+                <div class="job-salary">{{item.totalEarnings | number:0}}</div>
+                <div class="job-currency">VNĐ</div>
+            </div>
+            <div class="col job-description">
+                {{item.description}}
+            </div>
+        </div>
+        <div class="row job-footer">
+            <div class="col col-20 job-icon">
+              <img class="img-date" src="images/work/date_black.png">
+            </div>
+            <div class="col col-50">
+                <div class="job-date">{{item.startDate | date : 'dd/MM/yyyy'}}</div>
+                <div class="job-date">{{item.startTime | date: 'h:mm a'}} - {{item.endTime | date: 'h:mm a'}}</div>
+            </div>
+            <div class="col col-30">
+              <button class="button button-block job-button" ng-click="vm.goDetail(item)">
+                CHI TIẾT
+              </button>
+            </div>
+        </div>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,213 @@
+.client {
+    padding: 2%;
+    h1 {
+        margin-bottom: 0px;
+    }
+    h3, h4 {
+        font-weight: bold;
+    }
+    p.normal {  
+        font-size: 20px;
+        display: inline;
+    }
+    textarea {
+        font-size: 20px;
+    }
+    textarea::-webkit-input-placeholder {
+        font-size: 20px;
+        line-height: 1.3;
+    }
+    .nav-color {
+        background: rgb(2, 128, 144) !important
+    }
+    .check-icon {
+        position: absolute;
+        color: limegreen;
+        height: 25px;
+        width: 25px;
+    }
+    .inline {
+        display: inline;
+        padding-right: 10px;
+    }
+    .margin {
+        margin: 10px;
+    }
+    .margin-left {
+        margin-left: 10px;
+    }
+    .margin-bottom {
+        margin-bottom: 70px;
+    }
+    .border-input {
+        border: solid thin lightgrey;
+        padding: 5px;
+        text-align: center;
+    }
+    .small-input {
+        max-width: 40px;
+    }
+    .half {
+        width:80%;
+    }
+    .third {
+        float: left;
+        width: 20%;
+    }
+    .input {
+        padding: 0px !important
+    }
+    .squarebutton-left{
+        width: 50%; 
+        float:left;
+    }
+    .squarebutton-right{
+        width: 50%; 
+        float:right;
+    }
+    .squarebutton {
+        padding: 10px;
+        margin: 10px;
+        width:90%;
+        height:130px;
+        background: rgb(178, 219, 191);
+        color: white;
+    }
+    .circle {
+        width: 50px;
+        height: 50px;
+        margin: 0px auto;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        border-radius: 25px;
+        background: rgb(2, 128, 144)
+    }
+    .center {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        text-align: center;
+    }
+    .footer-btn {
+        background: mediumseagreen;
+        color: white;
+    }
+    .confirm-text {
+        border-bottom: gray;
+        border-style: solid;
+        font-size: 20px;
+        line-height: 1.5;
+        border-bottom-width: thin;
+    }
+    .margin-top {
+        margin-top: 30px;
+    }
+    .margin-top2 {
+        margin-top: 20px;
+    }
+    .margin-top3 {
+        margin-top: 30%;
+    }
+    .margin-top4 {
+        margin-top: 10px;
+    }
+    .margin-top5 {
+        margin-top: 10px !important;
+    }
+    .text-area {
+        min-height: 100px;
+    }
+    .half-width {
+        width: 50%; 
+        float:left; 
+        margin-top:30px
+    }
+    .half-width-left {
+        width: 50%; 
+        float:left; 
+        padding-right: 30px;
+    }
+    .half-width-right {
+        width: 50%; 
+        float:right; 
+    }
+    .full-width {
+        width: 100%; 
+        float:left; 
+        margin-top:30px
+    }
+    .btn-worklist {
+        background: rgb(178, 219, 191);
+        border-radius: 0px;
+        color: white;
+    }
+    .white-text {
+        color: white;
+    }
+    .error-text{
+        color: red;
+    }
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: -1;
+}
+
+.scroll {
+    height: 100%;
+}
+
+.map {
+    .searchBox {
+        height: 15%;
+        width: 90%;
+        margin-top: 5%;
+        margin-left: 5%;
+        position: absolute;
+
+        input {
+            width: 106%;
+            padding: 2%;
+            // box-shadow: 10px 7px 8px #888888;
+            margin: -10px;
+            height: 38px;
+            padding-right: 32px;
+        }
+
+        input:focus {
+            border-color: #0000FF;
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+        }
+
+        i {
+            position: absolute;
+            top: 0;
+            right: 0;
+            color: #808080;
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.select-location {
+    width: 85%;  
+    min-height: 30px;  
+    border: solid thin lightgrey;
+}
+.add-location {
+    width: 10%;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.footer-title {
+    text-align: center !important;
+    left: 0 !important;
+    right: 0 !important;
+}

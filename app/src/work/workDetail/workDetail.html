@@ -1,0 +1,69 @@
+<ion-view class="">
+  <ion-header-bar align-title="center" class="bar-positive nav-color">
+    <button menu-toggle="left"><input class="menu-button" type="image" src="images/logo/menu_ic.png" /></button>
+    <h1 class="title">CHI TIẾT CÔNG VIỆC</h1>
+  </ion-header-bar>
+  <ion-content class="has-header client work-confirm" scroll="true">
+    <hr class="blue-hr">
+    <div class="sub-header">
+      <button class="button button-clear back-button" ng-click="vm.goBack()">
+                <i class="ion-chevron-left"></i>
+            </button>
+      <p ng-show="vm.isShowButton()" class="sub-title">Quay lại danh sách công việc</p>
+      <p ng-hide="vm.isShowButton()" class="sub-title">Quay lại danh sách công việc của tôi</p>
+    </div>
+    <h3>{{vm.job.title}}</h3>
+    <table class="table-candidate">
+      <tr>
+        <th class="th-a">Nơi làm việc</th>
+        <th class="th-b"><b>{{vm.job.address}}</b></th>
+      </tr>
+      <tr>
+        <th class="th-a">Ngày</th>
+        <th class="th-b"><b>{{vm.job.startDate | date: 'dd/MM/yyyy'}}</b></th>
+      </tr>
+      <tr>
+        <th class="th-a">Giờ</th>
+        <th class="th-b"><b>{{vm.job.startTime | date: 'hh:mm a'}} - {{vm.job.endTime  | date: 'hh:mm a'}}</b></th>
+      </tr>
+      <tr>
+        <th class="th-a">Lặp lại</th>
+        <th class="th-b" ng-show="vm.job.weeks != 0 || vm.job.days.length != 0"><b ng-show="vm.job.weeks != 0">{{vm.job.weeks}} Tuần</b>
+          <p class="no-margin"><b ng-show="vm.job.days.length != 0">Mỗi <span ng-repeat="item in vm.job.days">{{item.sortName}} </span></b></p>
+        </th>
+        <th class="th-b" ng-show="vm.job.weeks == 0 && vm.job.days.length == 0"><b>Không</b></th>
+      </tr>
+      <tr>
+        <th class="th-a">Số tiền</th>
+        <th class="th-b"><b>{{vm.job.totalEarnings | number:0}} VND</b></th>
+      </tr>
+      <tr>
+        <th class="th-a">Số người</th>
+        <th class="th-b">
+          <b>
+                <p class="inline" ng-show="(vm.job.numberOfEmployees != 0)">{{vm.job.numberOfEmployees}} người</p>
+                <p class="inline" ng-show="(vm.job.numberOfMales != 0) && (vm.job.numberOfFemales != 0)">({{vm.job.numberOfMales}} nam </p>
+                <p class="inline" ng-show="(vm.job.numberOfMales != 0) && (vm.job.numberOfFemales != 0)">{{vm.job.numberOfFemales}} nữ)</p>
+            </b>
+        </th>
+      </tr>
+      <tr>
+        <th class="th-a">Mô tả ngắn</th>
+        <th class="th-b">{{vm.job.description}}</th>
+      </tr>
+      <tr>
+        <th class="th-a">Hình thức thanh toán</th>
+        <th class="th-b"><b>{{vm.job.payment}}</b></th>
+      </tr>
+    </table>
+    <div ng-show="!vm.isAppliedJob" class="list bottom list-inset">
+      <button ng-click="vm.applyJob(vm.job.id)" class="button submit">Ứng tuyển</button>
+    </div>
+    <div ng-show="vm.isAppliedJob" class="list bottom list-inset">
+      <button  class="button submit disabled">Đã ứng tuyển</button>
+    </div>
+  </ion-content>
+  <!--<div class="bar bar-footer bar-positive nav-color">
+        <a ui-sref="work.workList" ng-click="vm.createJob()" class="title">Hoàn tất</a>
+    </div>-->
+</ion-view>

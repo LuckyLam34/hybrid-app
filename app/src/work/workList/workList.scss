@@ -1,0 +1,60 @@
+.work-list {
+    .item-job{
+        padding: 0;
+        margin-top: 12px;
+    }
+    .job-title{
+        color: #263668;
+        font-size: $largeFont;
+        font-weight: bold;
+    }
+    .job-address{
+        color: #96A4BA;
+        border-bottom: 1px solid #f0f4f6;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .img-marker{
+        height: $largeFont;
+    }
+    .img-date{
+        height: 24px;
+    }
+    .job-salary, .job-currency{
+        color: #3aa0de;
+        font-size: $largeFont;
+        font-weight: bold;
+    }
+    .job-description{
+        color: #96A4BA;
+        border-left: 1px solid #f0f4f6;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+    }
+    .job-footer{
+        padding: 0;
+        background: #FCFDFD;
+        .col{
+            padding: 0;
+        }
+    }
+    .job-icon{
+        vertical-align: top;
+        text-align: center;
+        padding-top: 10px !important;
+        
+    }
+    .job-date{
+        color: #263668;
+        font-size: $smallFont;
+        font-weight: bold;
+    }
+    .job-button{
+        border-radius: initial;
+        margin: 0px;
+        color: white;
+        background: #61B3E4;
+    }
+}

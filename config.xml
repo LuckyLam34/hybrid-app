@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.tuanphan.iworker" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>iWorker</name>
+    <description>
+    Add your desription here
+  </description>
+    <author email="pttuan1994@gmail.com">
+    Tuan Phan
+  </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <preference name="webviewbounce" value="false" />
+    <preference name="UIWebViewBounce" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="BackupWebStorage" value="none" />
+    <preference name="Orientation" value="portrait" />
+    <platform name="android">
+        <icon density="ldpi" src="resources/icon.png" />
+        <icon density="mdpi" src="resources/icon.png" />
+        <icon density="hdpi" src="resources/icon.png" />
+        <icon density="xhdpi" src="resources/icon.png" />
+        <icon density="xxhdpi" src="resources/icon.png" />
+        <icon density="xxxhdpi" src="resources/icon.png" />
+    </platform>
+    <platform name="ios">
+        <icon height="180" src="resources/icon.png" width="180" />
+        <icon height="60" src="resources/icon.png" width="60" />
+        <icon height="120" src="resources/icon.png" width="120" />
+        <icon height="76" src="resources/icon.png" width="76" />
+        <icon height="152" src="resources/icon.png" width="152" />
+        <icon height="40" src="resources/icon.png" width="40" />
+        <icon height="80" src="resources/icon.png" width="80" />
+        <icon height="57" src="resources/icon.png" width="57" />
+        <icon height="114" src="resources/icon.png" width="114" />
+        <icon height="72" src="resources/icon.png" width="72" />
+        <icon height="144" src="resources/icon.png" width="144" />
+        <icon height="167" src="resources/icon.png" width="167" />
+        <icon height="29" src="resources/icon.png" width="29" />
+        <icon height="58" src="resources/icon.png" width="58" />
+        <icon height="50" src="resources/icon.png" width="50" />
+        <icon height="100" src="resources/icon.png" width="100" />
+        <icon height="167" src="resources/icon.png" width="167" />
+    </platform>
+    <plugin name="cordova-plugin-camera" spec="^2.4.1">
+        <variable name="CAMERA_USAGE_DESCRIPTION" value=" " />
+        <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value=" " />
+    </plugin>
+    <plugin name="cordova-plugin-geolocation" spec="^2.4.3">
+        <variable name="GEOLOCATION_USAGE_DESCRIPTION" value=" " />
+    </plugin>
+    <plugin name="cordova-plugin-request-location-accuracy" spec="^2.2.1" />
+    <plugin name="cordova-plugin-whitelist" spec="^1.3.2" />
+    <plugin name="cordova.plugins.diagnostic.api-22" spec="^2.3.10-api-22" />
+    <plugin name="cordova-plugin-compat" spec="^1.1.0" />
+</widget>

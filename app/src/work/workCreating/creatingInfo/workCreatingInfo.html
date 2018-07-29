@@ -1,0 +1,41 @@
+<ion-view class="">
+  <ion-header-bar align-title="center" class="bar-positive nav-color">
+    <button class="button button-clear" ng-click="vm.goBack()">
+            <i class="ion-chevron-left"></i>
+        </button>
+    <h1 class="title">{{vm.job.title}}</h1>
+  </ion-header-bar>
+  <form name="form">
+    <ion-content class="has-header client" scroll="true">
+      <div class="list list-inset">
+        <div>
+          <h4>Tên liên hệ</h4>
+          <input type="text" class="inline confirm-text" ng-model="vm.job.contactName" required>
+        </div>
+        <div class="margin-top">
+          <h4>Số điện thoại</h4>
+          <input type="tel" class="inline confirm-text" ng-model="vm.job.contactPhone" ng-minlength="9" ng-maxlength="11" required>
+        </div>
+        <div class="margin-top">
+          <h4>Hình thức thanh toán</h4>
+          <select ng-model="vm.job.payment" required>
+              <option >Tiền mặt</option>
+              <option >Chuyển khoản</option>
+          </select>
+        </div>
+        <div class="margin-top">
+          <h4>Chi tiết công việc</h4>
+          <label class="item item-input">  
+                    <textarea class="text-area"  type="text" ng-model="vm.job.description" placeholder="Anh/chị vui lòng mô tả chi tiết công việc để người lao động hoàn thành tốt nhất công việc cho anh/chị" required></textarea>
+                </label>
+        </div>
+        <div class="center error-text margin-top" ng-show="form.$invalid && form.$submitted">Vui lòng điền đầy đủ và chính xác thông tin</div>
+      </div>
+    </ion-content>
+  </form>
+  <ion-footer-bar>
+    <div class="bar bar-footer bar-positive nav-color" ng-click="vm.goCreatingConfirm(form)">
+      <a class="footer-title title">Tiếp theo</a>
+    </div>
+  </ion-footer-bar>
+</ion-view>

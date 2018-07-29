@@ -1,0 +1,281 @@
+body,
+.ionic-body {
+  font-family: Verdana;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: Verdana;
+}
+
+.tab-item {
+  font-family: Verdana;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: Verdana;
+}
+
+.menu-button {
+  max-width: 20px;
+  max-height: 20px;
+  margin: 0 auto;
+  display: block;
+}
+
+.bar.bar-positive {
+  background: #ffffff;
+}
+
+.bar.bar-positive .title {
+  color: #263668;
+}
+
+.bar .title {
+  font-size: $largeFont;
+}
+
+.bar button {
+  background: transparent;
+  border: none;
+}
+
+.loader {
+  text-align: center;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.content {
+  padding: 1rem;
+}
+
+.bar.bar-positive.bar-footer {
+  background: transparent;
+}
+
+.footer-title {
+  background: #3aa0de;
+  text-align: center !important;
+  left: 0 !important;
+  right: 0 !important;
+  color: white !important;
+  font-size: $largerFont !important;
+  font-weight: bold !important;
+}
+
+.client {
+  background: #f0f4f6;
+  h1 {
+    margin-bottom: 0px;
+  }
+  h3,
+  h4 {
+    font-weight: bold;
+  }
+  p.normal {
+    font-size: $mediumFont;
+    font-weight: bold;
+  }
+  .sub-header {
+    height: 45px;
+    background: #fff;
+    color: #3aa0de;
+  }
+  .sub-title {
+    display: inline;
+    font-size: $mediumFont;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 45px;
+  }
+  .blue-hr {
+    border: #3aa0de solid 1px;
+    margin: 0px;
+  }
+  .back-button {
+    color: #3aa0de;
+    display: inline;
+    font-size: $largerFont;
+  }
+  .bottom-text {
+    height: 25%;
+    background: #5eb1e3;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: column;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+  .confirm-text {
+    font-size: $largeFont;
+    line-height: 1.5;
+  }
+  .margin {
+    margin: 10px;
+  }
+  .margin-left {
+    margin-left: 10px;
+  }
+  .margin-bottom {
+    margin-bottom: 70px;
+  }
+  .margin-top {
+    margin-top: 30px;
+  }
+  .margin-top2 {
+    margin-top: 20px;
+  }
+  .margin-top3 {
+    margin-top: 16%;
+    padding: 4%;
+  }
+  .margin-top4 {
+    margin-top: 10px;
+  }
+  .small-input {
+    max-width: 40px;
+  }
+  .half {
+    width: 80%;
+  }
+  .third {
+    float: left;
+    width: 20%;
+  }
+  .chooseType {
+    .row {
+      margin-top: 60%;
+    }
+    .col-50 {
+      padding: 10px;
+    }
+    a {
+      text-align: center;
+    }
+  }
+  .scroll {
+    height: 100%;
+  }
+  a {
+    text-decoration: none;
+  }
+  .text-area {
+    min-height: 100px;
+  }
+  .half-width {
+    width: 50%;
+    float: left;
+  }
+  .half-width-left {
+    width: 50%;
+    float: left;
+    padding-right: 30px;
+  }
+  .half-width-right {
+    width: 50%;
+    float: right;
+  }
+  .full-width {
+    width: 100%;
+    float: left;
+  }
+  .btn-worklist {
+    background: rgb(178, 219, 191);
+    border-radius: 0px;
+    color: white;
+  }
+  .list {
+    background: transparent;
+  }
+  .item {
+    background: white;
+    margin-top: 4px;
+    font-size: $mediumFont;
+    border: none;
+    border-radius: 2px;
+  }
+  .item-stacked-label {
+    padding: 0;
+    padding-left: 16px;
+  }
+  .item.item-input input {
+    padding-right: 0;
+  }
+  //Checkbox
+  .checkbox input:checked:before,
+  .checkbox input:checked+.checkbox-icon:before {
+    background: #3aa0de;
+    border-color: #3aa0de;
+  }
+  //Select
+  .item-select select {
+    background: #3aa0de;
+    color: white;
+    width: 65%;
+    font-size: $largeFont;
+    font-weight: bold;
+    direction: ltr;
+  }
+  .item-select:after {
+    color: white;
+  }
+  //input
+  .input-label {
+    font-size: $mediumFont;
+  }
+  input {
+    color: #3aa0de;
+    font-size: $largeFont;
+    font-weight: bold;
+  }
+  textarea,
+  input[type="date"],
+  input[type="time"],
+  input[type="search"]{
+    color: #3aa0de;
+    font-size: $mediumFont;
+    font-weight: normal;
+    padding: 0px;
+  }
+  //icon
+  .icon-input {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 30%;
+    height: 100%;
+    display: inline-flex;
+    background: #3aa0de;
+  }
+  .img-input {
+    width: 50%;
+    margin: auto;
+    display: block;
+  }
+  .white-text {
+    color: white;
+  }
+  .error-text {
+    color: red;
+  }
+  .select-location {
+    width: 85%;
+    min-height: 30px;
+    border: solid thin lightgrey;
+  }
+  .button-footer {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #3aa0de;
+    border: none;
+    color: #fff;
+    font-size: $largerFont;
+    font-weight: bold;
+    height: 54px;
+    border-radius: 4px;
+  }
+}

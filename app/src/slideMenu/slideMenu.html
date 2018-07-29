@@ -1,0 +1,55 @@
+<ion-side-menus enable-menu-with-back-views="true">
+  <ion-side-menu-content drag-content="false">
+    <ion-nav-view name="viewContent">
+    </ion-nav-view>
+  </ion-side-menu-content>
+
+  <!-- Left menu -->
+  <ion-side-menu side="left" width="275" class="side-menu">
+    <ion-content class="sideMenu">
+      <div class="avata">
+        <img ng-if="!vm.userProfile.avatar" class="img-avata" src="images/user.png" ng-click="vm.showPopover($event)">
+        <img ng-if="vm.userProfile.avatar" class="img-avata" data-ng-src="{{vm.userProfile.avatar}}" ng-click="vm.showPopover($event)">
+        
+        <div class="name">
+          <p class="in-line" ng-bind="vm.userProfile.lastname | uppercase"></p>
+          <p class="in-line" ng-bind="vm.userProfile.firstname | uppercase"></p>
+        </div>
+        <p class="mediumFont" ng-bind="vm.userProfile.phone"></p>
+        <u class="mediumFont" ng-bind="vm.userProfile.email"></u>
+      </div>
+
+      <div class="list">
+        <a menu-close class="item item-icon-left"" ui-sref-active="active" ng-click="vm.goAccountInfo()">
+          <i class="icon ion-ios-people-outline"></i>
+          Thông tin tài khoản
+        </a>
+        <a menu-close class="item item-icon-left"" ui-sref-active="active" ui-sref="work.workList">
+          <i class="icon ion-ios-list-outline"></i>
+          Danh sách công việc
+          <!--<span class="badge badge-assertive">4</span>-->
+        </a>
+        <a menu-close class="item item-icon-left" ui-sref-active="active" ui-sref="app.home">
+          <i class="icon ion-ios-bell-outline"></i>
+          Khuyến mãi
+          <!--<span class="badge badge-assertive">1</span>-->
+        </a>
+        <a menu-close class="item item-icon-left" ui-sref-active="active" ui-sref="app.home">
+          <i class="icon ion-ios-information-outline"></i>
+          Hướng dẫn
+        </a>
+        <a menu-close class="item item-icon-left" ui-sref-active="active" ui-sref="app.home">
+          <i class="icon ion-ios-gear-outline"></i>
+          Cài đặt
+        </a>
+        <a menu-close class="item item-icon-left" ui-sref-active="active" ui-sref="app.home">
+          <i class="icon ion-ios-telephone-outline"></i>
+          Liên hệ
+        </a>
+      </div>
+      <div class="align-center" ng-click="vm.logout()">
+        <i class="icon ion-log-out"></i><span> ĐĂNG XUẤT</span>
+      </div>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

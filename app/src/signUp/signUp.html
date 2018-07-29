@@ -1,0 +1,56 @@
+<ion-view view-title="Đăng kí tài khoản" class="signup">
+    <ion-nav-buttons side="right">
+    </ion-nav-buttons>
+    <ion-content overflow-scroll=true class="has-header">
+        <div class="list list-inset">
+            <form ng-submit="vm.formSubmit()" class="form" name="myForm" novalidate>
+                <label class="item item-input">
+                    <input class="normal-text" name="lastname" ng-model="vm.user.lastname" type="text" placeholder="Họ" required/>
+                    <span ng-show="!myForm.lastname.$error.required" class="icon placeholder-icon ion-checkmark-circled check-icon-login"></span>
+                </label>
+                <label class="item item-input">
+                    <input class="normal-text" name="firstname" ng-model="vm.user.firstname" type="text" placeholder="Tên" required/>
+                    <span ng-show="!myForm.firstname.$error.required" class="icon placeholder-icon ion-checkmark-circled check-icon-login"></span>
+                </label>
+                <label class="item item-input">
+                    <input class="normal-text" name="email" type="email" placeholder="Email" ng-model="vm.user.email" required/>
+                    <span ng-show="!(myForm.email.$error.email || myForm.email.$error.required)" class="icon placeholder-icon ion-checkmark-circled check-icon-login"></span>
+                </label>
+                <label class="item item-input">
+                    <input class="normal-text" type="number" name="phone" placeholder="Số điện thoại" ng-model="vm.user.phone" ng-minlength="10" required/>
+                    <span ng-show="!(myForm.phone.$error.number || myForm.phone.$error.required || myForm.phone.$error.minlength)" class="icon placeholder-icon ion-checkmark-circled check-icon-login"></span>
+                </label>
+                <label class="item item-input">
+                    <input class="normal-text" ng-model="vm.user.dob" name="dob" type="date" placeholder="Ngày sinh" required/>
+                    <span ng-show="!myForm.dob.$error.required" class="icon placeholder-icon ion-checkmark-circled check-icon-login"></span>
+                </label>
+                <label class="item item-input">
+                    <select class="dropdown-list" name="gender" ng-model="vm.user.gender" required>
+                        <option disabled selected value> -- Chọn giới tính -- </option>
+                        <option selected value="male">Nam</option>
+                        <option value="female">Nữ</option>
+                    </select>
+                    <span ng-show="!myForm.gender.$error.required" class="icon placeholder-icon ion-checkmark-circled check-icon-login"></span>
+                </label>
+                <label class="item item-input">
+                    <input class="normal-text" ng-model="vm.user.username" name="username" type="text" placeholder="Tên đăng nhập" required/>
+                    <span ng-show="!myForm.username.$error.required" class="icon placeholder-icon ion-checkmark-circled check-icon-login"></span>
+                </label>
+                <label class="item item-input">  
+                    <input class="normal-text" type="password" name="password" placeholder="Mật khẩu" ng-model="vm.user.password" ng-minlength="8" required>
+                    <span ng-show="!(myForm.password.$error.minlength || myForm.password.$error.required)" class="icon placeholder-icon ion-checkmark-circled check-icon-login"></span>
+                </label>
+                <label class="item item-input">  
+                    <input class="normal-text" type="password" name="confirmPassword" ng-model="vm.confirmPassword" placeholder="Nhập lại mật khẩu" ng-minlength="8" required>
+                    <span ng-show="!(myForm.confirmPassword.$error.minlength || myForm.confirmPassword.$error.required || vm.confirmPassword != vm.user.password)" class="icon placeholder-icon ion-checkmark-circled check-icon-login"></span>
+                </label>
+                <button type="submit" ng-disabled="(myForm.lastname.$error.required 
+                || myForm.firstname.$error.required || myForm.email.$error.email || myForm.gender.$error.required || myForm.email.$error.required 
+                || myForm.phone.$error.number || myForm.phone.$error.required || myForm.phone.$error.minlength || myForm.dob.$error.required || myForm.username.$error.required
+                || myForm.password.$error.minlength || myForm.password.$error.required || myForm.confirmPassword.$error.minlength 
+                || myForm.confirmPassword.$error.required || vm.confirmPassword != vm.user.password)" class="button button-block button-positive nav-color">Đăng ký</button>
+            </form>
+
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,48 @@
+/************************************
+ *
+ *  Main Styles to compile. Here only @imports!
+ *
+ ************************************/
+
+@import "_variables";
+@import "_fonts";
+
+/**
+ * MAIN
+ */
+ @import "../src/main/style";
+
+/**
+ * COMMON
+ */
+ @import "../src/common/searchbar/searchbar";
+
+ /**
+ * LOGIN
+ */
+@import "../src/login/login";
+
+ /**
+ * SIGN_UP
+ */
+ @import "../src/signUp/signUp";
+
+ /**
+ * SLIDE_MENU
+ */
+@import "../src/slideMenu/slideMenu";
+@import "../src/slideMenu/accountInfo/accountInfo";
+@import "../src/slideMenu/transactionHistory/transactionHistory";
+@import "../src/slideMenu/appliedJobList/appliedJobList";
+@import "../src/slideMenu/changePassword/changePassword";
+
+ /**
+ * WORK
+ */
+ @import "../src/work/work";
+@import "../src/work/workList/workList";
+@import "../src/work/workDetail/workDetail";
+
+
+
+

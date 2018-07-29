@@ -1,0 +1,32 @@
+
+.signup {
+    .img {
+        width: 150px;
+        height: 150px;
+        display: block;
+        margin: auto;
+    }
+    .text-align {
+        text-align: center;
+        font-size: 18px;
+    }
+    .inline {
+        display: inline;
+        padding-right: 10px;
+    }
+    .check-icon {
+        position: absolute;
+        right: 10px;
+        color: limegreen;
+        height: 25px;
+        width: 25px;
+    }
+    .normal-text {  
+        font-size: 18px;
+        display: inline;
+    }
+    .dropdown-list {
+        font-size: 18px;
+        width: 85%;
+    }
+}

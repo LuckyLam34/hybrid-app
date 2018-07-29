@@ -1,0 +1,110 @@
+<ion-view class="login" hide-nav-bar="true">
+    <ion-content class="client">
+        <img class="header-bg-img" src="images/login_img.png" alt="up background img" />
+        <ion-tabs class="tabs-icon-top">
+
+            <ion-tab title="Đăng nhập">
+                <ion-view class="login-tab">
+                    <ion-content scroll="false">
+                        <img class="text-logo" src="images/logo/logoWorker.png" alt="logo"/>
+
+                        <div class="list list-inset">
+                            <form ng-submit="vm.formSubmit()" class="form" name="myForm" novalidate>
+                                <label class="item item-input">
+                                    <img src="images/icon_human.png">
+                                    <input type="text" ng-model="vm.username" required placeholder="Tài khoản">
+                                    
+                                </label>
+                                <label class="item item-input last">
+                                    <img src="images/icon_lock.png">
+                                    <input type="password" ng-model="vm.password" placeholder="Mật khẩu" required>
+                                </label>
+                                <p>Quên mật khẩu?</p>
+                                <br/>
+                                <p class="error assertive" ng-show="vm.wrongLogin">Tài khoản hoặc mật khẩu không chính xác</p>
+                                <button type="submit" class="button btn-login button-block button-positive nav-color">Đăng nhập</button>
+                                <label class="item item-input fb">
+                                    <img src="images/fb.png">
+                                    <button class="button button-positive">Facebook</button>
+                                </label>
+                                <label class="item item-input gg">
+                                    <img src="images/gg.png">
+                                    <button class="button button-positive">Google</button>
+                                </label>
+                            </form>
+                        </div>
+
+                    </ion-content>
+                </ion-view>
+
+            </ion-tab>
+
+            <ion-tab title="Đăng ký">
+                <ion-view class="register-tab">
+                    <ion-content scroll="true">
+                        <div class="list list-inset">
+                            <form ng-submit="vm.formSubmitRegister()" class="form" name="myForm" novalidate>
+                                <label class="item item-input last-name">
+                                    <span>Họ</span>
+                                    <input name="lastname" ng-model="vm.user.lastname" type="text" required/>
+                                    
+                                </label>
+
+                                <label class="item item-input first-name">
+                                    <span>Tên</span>
+                                    <input name="firstname" ng-model="vm.user.firstname" type="text" required/>
+                                    
+                                </label>
+
+                                <label class="item item-input">
+                                    <span style="width: 49%">Email</span>
+                                    <input class="normal-text" name="email" type="email" ng-model="vm.user.email"/>
+                                </label>
+
+                                <label class="item item-input">
+                                    <span>Số điện thoại</span>
+                                    <input class="normal-text" type="number" name="phone" ng-model="vm.user.phone" ng-minlength="10"/>
+                                </label>
+
+                                <label class="item item-input">
+                                    <span>Tên đăng nhập</span>
+                                    <input class="normal-text" ng-model="vm.user.username" name="username" type="text"/>
+                                </label>
+
+                                <label class="item item-input">
+                                    <span>Mật khẩu</span>
+                                    <input class="normal-text" type="password" name="password" ng-model="vm.user.password" ng-minlength="8" ng-model-options="{debounce: 750}">
+                                </label>
+
+                                <div class="error-subscribe" ng-if="myForm.password.$error.minlength" ng-message="minlength">Mật khẩu phải lớn hơn hoặc bằng 8 kí tự</div>
+
+                                <label class="item item-input">
+                                    <span>Nhập lại mật khẩu</span>
+                                    <input class="normal-text" type="password" name="confirmPassword" ng-model="vm.confirmPassword" ng-minlength="8">
+                                </label>
+
+                                <label class="item item-input">
+                                    <span>Giới tính</span>
+                                    <select class="dropdown-list" name="gender" ng-model="vm.user.gender" required>
+                                        <option disabled selected value>Chọn giới tính</option>
+                                        <option selected value="male">Nam</option>
+                                        <option value="female">Nữ</option>
+                                    </select>
+                                </label>
+                                <label class="item item-input">
+                                    <span>Ngày sinh</span>
+                                    <input class="normal-text" ng-model="vm.user.dob" name="dob" type="date" placeholder="Ngày sinh" required/>
+                                   <!--<img src="images/work/date_black.png" />-->
+                                </label>
+
+                                <button type="submit" class="button button-block button-positive nav-color">Đăng ký</button>
+                            </form>
+                        </div>
+                    </ion-content>
+                </ion-view>
+            </ion-tab>
+
+        </ion-tabs>
+
+    </ion-content>
+</ion-view>

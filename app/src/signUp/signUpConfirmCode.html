@@ -1,0 +1,20 @@
+<ion-view view-title="Xác thực tài khoản" class="signup">
+    <ion-nav-buttons side="right">
+        <button class="button button-clear" ng-click="vm.goNext()">
+            Hoàn Tất
+        </button>
+    </ion-nav-buttons>
+    <ion-content class="has-header">
+        <div>
+            <img class="img" src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/ce54bf11889067.562541ef7cde4.png">
+        </div>
+        <h3 class="text-align">Nguyễn Văn B - {{vm.userPhone}}</h3>
+        <p class="text-align">MÃ XÁC THỰC đã được gửi đến số điện thoại của bạn qua tin nhắn. Vui lòng nhập MÃ XÁC THỰC vào ô bên dưới</p>
+        <div class="list list-inset">
+            <label class="item item-input">
+                    <input class="normal-text" type="text" placeholder="Mã xác thực"/>
+                </label>
+        </div>
+        <center><a class="normal-text text-align">Gửi lại mã xác thực</a></center>
+    </ion-content>
+</ion-view>

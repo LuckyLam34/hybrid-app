@@ -1,0 +1,177 @@
+.welcome {
+    img {
+        height: 60px;
+        width: 120px;
+        display: block;
+        margin: 70% auto;
+    }
+}
+
+.login {
+
+    .login-tab {
+        background-color: #f0f4f6;;
+    }
+
+    img.text-logo {
+        width: 260px;
+        display: block;
+        margin: 50px auto 30px;
+    }
+
+    img.header-bg-img {
+        min-width: 360px;
+        min-height: 100px;
+    }
+
+    .item-input {
+        img {
+            width: 20px;
+        }
+    }
+
+    .pane {
+        margin-top: 115px;
+    }
+
+    .list-inset {
+        background-color: transparent;
+
+        p {
+            color: #96a4ba;
+            font-size: 12px;
+            float: right;
+            padding-top: 6px;
+        }
+
+        button {
+            font-weight: bold;
+        }
+
+        button.btn-login {
+            margin-top: 55px;
+            background-color: #3aa0de !important;
+        }
+
+        label.fb {
+            float: left;
+            border-radius: 4px;
+            height: 49px;
+            width: 49%;
+            background-color: #0072bc;
+            button {
+                width: 100%;
+                margin-left: 15px;
+                border-radius: 0;
+                background-color: #3aa0de;
+            }
+            // margin-right: 10px;
+        }
+
+        label.gg {
+            float: right;
+            border-radius: 4px;
+            height: 49px;
+            width: 49%;
+            background-color: #f68e56;
+            button {
+                width: 100%;
+                margin-left: 15px;
+                border-radius: 0;
+                background-color: #f5a276;
+            }
+
+
+        }
+    }
+
+    label.item-input {
+        background-color: #fcfdfd;
+        height: 50px;   
+        padding-top: 0;
+        padding-bottom: 0;
+        border-radius: 4px;
+
+        input {
+            background-color: #fff;
+            margin-left: 15px;
+            padding-left: 12px;
+            height: 50px;
+            font-size: 16px;
+            color: #3aa0de;
+        }
+    }
+
+    label.last {
+        margin-top: 10px;
+    }
+
+    .tab-nav {
+        margin-top: 72px;
+    }
+
+    .tab-item, .tab-item-active {
+        font-size: 16px !important;
+        padding-top: 15px;
+        max-width: 100%;
+    }
+
+    .tab-item {
+        color: #96a4ba;
+    }
+
+    .tab-item-active {
+        color: #3aa0de;
+        border-color: #3aa0de !important;
+    }
+
+    .error, .error-subscribe {
+        
+        color: #ef473a !important;
+    }
+
+    .error {
+        padding-top: 10px;
+    }
+
+    .error-subscribe {
+        padding-left: 17px;
+        padding-bottom: 10px;
+    }
+
+    .register-tab {
+        background-color: #f0f4f6;;
+
+        .last-name {
+            width: 49%;
+            float: left;
+        }
+        .first-name {
+            width: 49%;
+            float: right;
+        }
+
+        label.item-input {
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #3aa0de !important;
+        }
+
+        span {
+            width: 49%;
+        }
+
+        select {
+            background: #3aa0de;
+            color: white;
+            width: 65%;
+            font-size: 16px;
+            font-weight: bold;
+            height: 50px;
+        }
+    }
+    
+    
+}

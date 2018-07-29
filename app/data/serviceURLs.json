@@ -1,0 +1,6 @@
+{
+    "users": "/data/users.json",
+    "options": "/data/options.json",
+    "workDetail": "/data/workDetail.json",
+    "workList": "/data/workList.json"
+}

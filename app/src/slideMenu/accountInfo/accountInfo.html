@@ -1,0 +1,108 @@
+<ion-view class="accountInfo">
+  <ion-header-bar align-title="center" class="bar-positive nav-color">
+    <button menu-toggle="left"><input class="menu-button" type="image" src="images/logo/menu_ic.png" /></button>
+    <h1 class="title">{{vm.userProfile.lastname}} {{vm.userProfile.firstname}}</h1>
+  </ion-header-bar>
+  <ion-content>
+    <div class="bgimg">
+      <div class="div-has-bgimg">
+        <img ng-if="!vm.userProfile.avatar" class="img" src="images/user.png" ng-click="vm.showPopover($event)">
+        <img ng-if="vm.userProfile.avatar" class="img" data-ng-src="{{vm.userProfile.avatar}}" ng-click="vm.showPopover($event)">
+        <p class="name">{{vm.userProfile.lastname}} {{vm.userProfile.firstname}}</p>
+        <div class="th-star display-block">
+          <ul>
+            <!--<li class="star-container" ng-repeat="i in vm.getNumber(vm.getCandidateDetail.workerRating) track by $index"><img class="star" src="images/logo/star.png"></li>-->
+            <li class="star-container"><img class="star" src="images/logo/star.png"></li>
+            <li class="star-container"><img class="star" src="images/logo/star.png"></li>
+            <li class="star-container"><img class="star" src="images/logo/star.png"></li>
+            <li class="star-container"><img class="star" src="images/logo/star.png"></li>
+            <li class="star-container"><img class="star" src="images/logo/star.png"></li>
+          </ul>
+        </div>
+        <p class="info">{{vm.userProfile.phone}}</p>
+        <p class="info underline">{{vm.userProfile.email}}</p>
+      </div>
+    </div>
+    <table class="money-table">
+      <tr>
+        <th colspan="2">
+          <div class="inline">
+            <img class="wallet-img" src="images/logo/wallet_icon.png" />
+          </div>
+          <div class="inline">
+            <p class="gray-small-text">
+              Tổng tiền
+            </p>
+            <p class="orange-money">
+              {{vm.userProfile.actualAmount | number:0}} VND
+            </p>
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <p class="gray-small-text text-center">
+            Tiền khả dụng
+          </p>
+          <p class="blue-money text-center">
+            {{vm.userProfile.availableAmount | number:0}} VND
+          </p>
+        </td>
+        <td>
+          <p class="gray-small-text text-center">
+            Tiền tạm giữ
+          </p>
+          <p class="blue-money text-center">
+            {{vm.userProfile.pendingAmount | number:0}} VND
+          </p>
+        </td>
+      </tr>
+    </table>
+    <div class="info-detail">
+      <div class="darkgray-div">
+        <p class="sub-title">Thông tin cá nhân</p>
+        <i class="right-icon2 icon ion-ios-plus-empty"></i>
+      </div>
+      <table class="table-candidate">
+        <tr>
+          <th class="th-a">Họ tên</th>
+          <th class="th-b"><b>{{vm.userProfile.lastname}} {{vm.userProfile.firstname}}</b></th>
+        </tr>
+        <tr>
+          <th class="th-a">Ngày sinh</th>
+          <th class="th-b"><b>{{vm.userProfile.dob | date : 'dd/MM/yyyy'}}</b></th>
+        </tr>
+        <tr>
+          <th class="th-a">Email</th>
+          <th class="th-b"><b>{{vm.userProfile.email}}</b></th>
+        </tr>
+        <tr>
+          <th class="th-a">Giới tính</th>
+          <th class="th-b" ng-show="vm.userProfile.gender == 'male'"><b>Nam</b></th>
+          <th class="th-b" ng-show="vm.userProfile.gender == 'female'"><b>Nữ</b></th>
+        </tr>
+        <tr>
+          <th class="th-a">Địa chỉ</th>
+          <th class="th-b"><b></b></th>
+        </tr>
+      </table>
+      <div class="gray-div">
+        <p class="sub-title">Thay đổi thông tin</p>
+        <i class="right-icon lightgray icon ion-ios-arrow-forward"></i>
+      </div>
+      <div class="gray-div" ng-click="vm.goChangePassword()">
+        <p class="sub-title">Thay đổi mật khẩu</p>
+        <i class="right-icon lightgray icon ion-ios-arrow-forward"></i>
+      </div>
+      <br>
+      <div ng-click="vm.goMyAppliedJobs()" class="darkgray-div">
+        <p class="sub-title">Công việc của tôi</p>
+        <i class="right-icon icon ion-ios-arrow-forward"></i>
+      </div>
+      <div ng-click="vm.goTransactionHistory()" class="darkgray-div">
+        <p class="sub-title">Lịch sử giao dịch</p>
+        <i class="right-icon icon ion-ios-arrow-forward"></i>
+      </div>
+    </div>
+  </ion-content>
+
+</ion-view>

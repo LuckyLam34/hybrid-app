@@ -1,0 +1,13 @@
+.searchbar {
+    .list{
+        margin: 0;
+    }
+    .item:first-child{
+        margin: 0;
+        padding-right: 16px;
+    }
+    .placeholder-icon {
+        color: #3aa0de;
+        font-size: 24px;
+    }
+}   

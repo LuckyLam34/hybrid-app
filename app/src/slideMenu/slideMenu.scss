@@ -1,0 +1,56 @@
+.sideMenu {
+    .list{
+        padding: 0;
+    }
+    .item {
+        color: #263668;
+        font-weight: bold;
+        font-size: $mediumFont;
+        border: none;
+        border-bottom: 1px solid gray;
+    }
+    .item:last-child{
+        border-bottom: none;
+    }
+    .item-icon-left .icon {
+        font-size: 24px;
+    }
+    .avata {
+        padding: 8%;
+        background-image: url('../images/logo/cover_background.png');
+        color: #ffffff;
+        text-align: center;
+        font-size: 18px;
+        p {
+            margin-bottom: 5px !important;
+        }
+        .name {
+            font-weight: bold;
+            margin: 5% !important;
+        }
+        .in-line {
+            display: inline;
+        }
+        .mediumFont{
+            font-size: $mediumFont;
+        }
+    }
+    .img-avata {
+        width: 120px;
+        height: 120px;
+        display: block;
+        margin: auto;
+        padding: 5%;
+        border-radius: 50%;
+    }
+    .badge.badge-assertive{
+        background-color: #ff9800;
+        font-size: 12px;
+    }
+    .align-center {
+        padding: 5%;
+        text-align: center;
+        font-weight: bold;
+        color: gray;
+    }
+}

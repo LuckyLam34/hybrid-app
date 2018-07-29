@@ -1,0 +1,185 @@
+.accountInfo {
+    .item {
+        padding: 5% !important;
+    }
+    .avata {
+        padding: 8%;
+        background-color: #696969;
+        color: #ffffff;
+        text-align: center;
+        font-size: 18px;
+        p {
+            margin-bottom: 5px !important;
+        }
+        .name {
+            font-weight: bold;
+            margin: 5% !important;
+        }
+        .in-line {
+            display: inline;
+        }
+    }
+    .img {
+        width: 120px;
+        height: 120px;
+        display: block;
+        margin: auto;
+        padding: 5%;
+        border-radius: 50%;
+    }
+    .ion-star {
+        color: #ffff00;
+    }
+    .align-center {
+        padding: 5%;
+        text-align: center;
+    }
+    .title {
+        text-transform: uppercase;
+    }
+    .cover-photo {
+        width: 100%;
+        height: 100%;
+    }
+    .bgimg {
+        background-image: url('../images/logo/cover_background.png');    
+        background-size: cover;
+        height: 225px;
+    }
+    .div-has-bgimg {
+        text-align: center;
+    }
+    .name {
+        font-weight: bold;
+        color: white;
+        text-transform: uppercase;
+        font-size: $largerFont;
+        margin: 0px;
+    }
+    .th-star {
+        padding: 0px;
+        border: 0px;
+        text-align:center; 
+        vertical-align:middle;
+    }
+    .display-block {
+        display: inline-block;
+    }
+    .star-container {
+        float: left;
+        display: inline;
+    }
+    .star {
+        width: 17px;
+        height: 17px;
+        margin: 3px;    
+        margin-top: 6px;
+    }
+    .info {
+        font-size: $smallFont;
+        color: white;
+        margin: 0px;
+    }
+    .underline {
+        text-decoration: underline;
+    }
+    .money-table {
+        width: 100%;
+        border-collapse: collapse;
+        border-style: hidden;
+        th, td {
+            border: 1px solid #eff3f5;
+            padding: 10px;
+            text-align: left;  
+        }
+    }
+    .info-detail {
+        padding: 5%;
+        background: #eff3f5;
+    }
+    .wallet-img {
+        width: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .gray-small-text {
+        color: #96a4ba;
+        font-size: $smallFont;
+        margin: 0px;
+    }
+    .orange-money {
+        font-size: $largerFont;
+        color: #ff9800;
+        font-weight: bold;
+        margin: 0px;
+    }
+    .blue-money {
+        font-size: $largeFont;
+        color: $inputTextColor;
+        font-weight: bold;
+        margin: 0px;
+    }
+    .inline {
+        display: inline-block;
+    }
+    .text-center {
+        text-align: center;
+    }
+    .darkgray-div {
+        background: #dee4ea;
+        border-radius: 3px;
+        margin-bottom: 3%;
+    }
+    .gray-div {
+        background: #fcfdfd;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        border-bottom: solid 1px #eff3f5;
+    }
+    .right-icon {
+        font-size: 22px;
+        float: right;
+        padding: 14px;
+    }
+    .right-icon2 {
+        font-size: 30px;
+        float: right;
+        padding: 10px;
+    }
+    .lightgray {
+        color: #96a4ba;
+    }
+    .sub-title {
+        display: inline-block;
+        padding: 15px;
+        margin: 0px;
+    }
+    .table-candidate {
+        background: white;
+        border-radius: 6px;
+        width: 100%;
+        margin-top: 5%;
+    }
+    .th-a {
+        width: 33%;
+        color: #263668; 
+    }
+    .th-b {
+        width: 67%;
+        color: $inputTextColor;
+        p {
+            color: $inputTextColor !important;
+        }
+    }
+    tr {
+        width: 100%;
+    }
+    th {
+        font-size: 14.3px;
+        padding: 10px;
+        word-wrap: break-word;
+        white-space: normal;
+        text-align: left;
+        border: 1px solid #f0f4f6;
+    }
+}

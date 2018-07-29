@@ -1,0 +1,48 @@
+.appliedJobList {
+    
+    .the-list {
+        background-color: $bgColor;
+    }
+
+    .list-inset {
+        background-color: transparent;
+        margin-top: 0;
+        margin-bottom: 10px;
+
+        .item {
+            border-radius: 2px;
+            border: none;
+        }
+
+        .status {
+            float: right;
+        }
+
+        .waiting {
+
+            .title-header {
+                background-color: #ffb145;
+            }
+        }
+
+        .rejected {
+            .title-header {
+                background-color: #d33c36;
+            }
+        }
+
+        .approved {
+            .title-header {
+                background-color: #298bcc;
+            }
+        }
+
+        .job-address {
+            padding-top: 10px;
+        }
+    }
+
+    a {
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,23 @@
+<ion-view view-title="Đăng kí tài khoản" class="signup">
+    <ion-nav-buttons side="right">
+        <button class="button button-clear" ng-click="vm.goLogin()">
+            Tiếp
+        </button>
+    </ion-nav-buttons>
+    <ion-content class="has-header">
+        <div>
+            <img class="img" src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/ce54bf11889067.562541ef7cde4.png">
+        </div>
+        <h3 class="text-align">{{vm.userData.fullName}}</h3>
+        <p class="text-align">Xin vui lòng nhập số điện thoại để xác thực tài khoản</p>
+        <div class="list list-inset">
+                <form class="form" name="myForm" novalidate>
+            <label class="item item-input">
+                    <input type="text" class="inline confirm-text normal-text" ng-model="vm.telephone" placeholder="Số điện thoại" required>
+                    <span ng-hide="!myForm.telephone.$valid" class="icon placeholder-icon ion-checkmark-circled check-icon"></span>
+                
+            </label>
+            </form>
+        </div>
+    </ion-content>
+</ion-view>

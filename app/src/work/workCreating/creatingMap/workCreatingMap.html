@@ -1,0 +1,26 @@
+<ion-view class="map">
+    <!--<ion-nav-title>
+      {{vm.viewTitle}}
+    </ion-nav-title>--> 
+    <ion-header-bar align-title="center" class="bar-positive nav-color">
+        <!--<ion-nav-back-button class="button-clear" ng-click="vm.goBack()">
+            <i class="ion-chevron-left"></i>
+        </ion-nav-back-button>-->
+        <button class="button button-clear" ng-click="vm.goBack()">
+            <i class="ion-chevron-left"></i>
+        </button>
+        <h1 class="title">{{vm.job.title}}</h1>
+    </ion-header-bar>
+    <ion-content ng-init="vm.loadMap()">
+          
+            <div class="searchBox">
+                <input id="input" ng-change="vm.onChange()" type="text" ng-model="vm.place.address" placeholder="Tìm kiếm..."/>
+                <i ng-click="vm.clear()" class="ion-close-round"></i>
+            </div>
+        <div id="map" data-tap-disabled="true"></div>
+        
+    </ion-content>
+    <div class="bar bar-footer bar-positive nav-color">
+        <a ng-click="vm.saveLocation()" ui-sref="work.workCreatingDetail" class="title">Lưu địa chỉ</a>
+    </div>
+</ion-view>

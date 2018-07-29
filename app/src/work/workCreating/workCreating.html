@@ -1,0 +1,21 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-positive nav-color">
+    <button class="button button-icon icon ion-navicon" menu-toggle="left"></button>
+    <h1 class="title">KHÁCH HÀNG</h1>
+  </ion-header-bar>
+  <ion-content class="has-header client">
+    <div class="margin-top3">
+      <div ng-class="vm.showWorkType($index)" ng-repeat="item in vm.workTypes">
+        <div class="squarebutton" ng-click="vm.goCreatingDetail(item)">
+          <div class="circle"></div>
+          <center class="margin-top4">
+            <p class="white-text normal">{{item}}</p>
+          </center>
+        </div>
+      </div>
+
+      <button class="button center btn-worklist" ng-click="vm.workList()">Your Work</button>
+    </div>
+
+  </ion-content>
+</ion-view>

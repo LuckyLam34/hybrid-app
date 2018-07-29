@@ -1,0 +1,62 @@
+<div class="transaction">
+    <ion-view class="accountInfo">
+        <ion-header-bar align-title="center" class="bar-positive nav-color">
+            <button ng-click="vm.goBack()"><input class="menu-button" type="image" src="images/back_btn.png" /></button>
+            <h1 class="title">LỊCH SỬ GIAO DỊCH</h1>
+        </ion-header-bar>
+
+        <ion-content>
+            <table class="money-table">
+                <tr>
+                    <th colspan="2">
+                        <div class="inline">
+                            <img class="wallet-img" src="images/logo/wallet_icon.png" />
+                        </div>
+                        <div class="inline">
+                            <p class="gray-small-text">
+                                Tổng tiền
+                            </p>
+                            <p class="orange-money">
+                                {{vm.userProfile.actualAmount}} VND
+                            </p>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="gray-small-text text-center">
+                            Tiền khả dụng
+                        </p>
+                        <p class="blue-money text-center">
+                            {{vm.userProfile.availableAmount}} VNĐ
+                        </p>
+                    </td>
+                    <td>
+                        <p class="gray-small-text text-center">
+                            Tiền tạm giữ
+                        </p>
+                        <p class="blue-money text-center">
+                            {{vm.userProfile.pendingAmount}} VNĐ
+                        </p>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="content-info">
+                <table ng-hide="vm.infoRecords.length == 0">
+                    <tr>
+                        <th>Ngày</th>
+                        <th class="job-title">Loại giao dịch</th>
+                        <th>Số tiền (VNĐ)</th>
+                    </tr>
+                    <tr ng-repeat="info in vm.infoRecords track by $index">
+                        <td class="date">{{info.createDate | date:'dd/MM/yyyy'}}</td>
+                        <td class="job-title">{{info.type}}</td>
+                        <td>{{info.amount}}</td>
+                    </tr>
+                </table>
+                <p ng-show="vm.infoRecords.length == 0">Bạn chưa có giao dịch nào</p>
+            </div>
+        </ion-content>
+
+    </ion-view>
+</div>

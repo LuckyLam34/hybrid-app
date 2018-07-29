@@ -1,0 +1,9 @@
+{
+    "title": "DỌN DẸP NHÀ", "time": "8:00 am 03/03/2017", "address": "366 Nguyễn Trãi, phường 8, quận 5, tpHCM", "price": "125.000 VND/2h", "cancelfee": "20.000VND", "numberOfWorkers": "6",
+    "workersList": [{ "rating": "4.5", "name": "Nguyễn Thị A", "dob": "1985", "exp": "Kinh nghiệm 5 năm giúp việc", "skill": "Có thể nấu ăn" },
+        { "rating": "4.5", "name": "Nguyễn Thị A", "dob": "1985", "exp": "Kinh nghiệm 5 năm giúp việc", "skill": "Có thể nấu ăn" },
+        { "rating": "4.7", "name": "Nguyễn Thị B", "dob": "1987", "exp": "Kinh nghiệm 7 năm giúp việc", "skill": "Có thể làm vườn" },
+        { "rating": "4.5", "name": "Nguyễn Thị C", "dob": "1990", "exp": "Kinh nghiệm 3 năm giúp việc", "skill": "Không thể nấu ăn" },
+        { "rating": "4.5", "name": "Nguyễn Thị D", "dob": "1989", "exp": "Kinh nghiệm 2 năm giúp việc", "skill": "Có thể nấu ăn" },
+        { "rating": "4.5", "name": "Nguyễn Thị A", "dob": "1985", "exp": "Kinh nghiệm 5 năm giúp việc", "skill": "Có thể nấu ăn" }]
+}

@@ -1,0 +1,78 @@
+<ion-view class="">
+  <ion-header-bar align-title="center" class="bar-positive nav-color">
+    <button class="button button-clear" ng-click="vm.goBack()">
+            <i class="ion-chevron-left"></i>
+        </button>
+    <h1 class="title">{{vm.job.title}}</h1>
+  </ion-header-bar>
+  <form name="form">
+    <ion-content class="has-header client" scroll="true">
+      <div class="margin list list-inset">
+        <div class="full-width">
+          <h4 class="inline">Nơi làm việc</h4>
+          <div class="margin">
+          <select class="select-location" ng-model="vm.job.address">
+                <option disabled selected value> -- Chọn địa chỉ -- </option>
+                <option ng-repeat="place in vm.job.places" value="{{place.address}}">{{place.address}}</option>
+            </select>
+          <a ui-sref="work.workCreatingMap" class="ion-plus-circled add-location"></a>
+          </div>
+        </div>
+        <div class="half-width">
+          <div class="half">
+            <h4>Ngày bắt đầu</h4>
+            <input class="input border-input" type="date" ng-model="vm.job.startDate" required>
+          </div>
+        </div>
+        <div class="half-width">
+          <div class="half">
+            <h4>Ngày kết thúc</h4>
+            <input class="input border-input" type="date" ng-model="vm.job.endDate" required>
+
+          </div>
+        </div>
+        <div class="half-width">
+          <div class="half">
+            <h4>Giờ bắt đầu</h4>
+            <input class="input border-input" type="time" ng-model="vm.job.startTime" required>
+          </div>
+        </div>
+        <div class="half-width">
+          <div class="half">
+            <h4>Giờ kết thúc</h4>
+            <input class="input border-input" type="time" ng-model="vm.job.endTime" required>
+          </div>
+        </div>
+        <div class="full-width">
+          <h4 class="inline">Số tiền</h4>
+          <input class="inline border-input" type="number" ng-model="vm.job.earningPerDay" required>
+          <a class="ion-information-circled"></a>
+        </div>
+        <div class="full-width margin-top">
+          <h4 class="inline">Số lượng người</h4>
+          <div class="margin">
+            <div class="inline" ng-hide="checked">
+              <input class="inline small-input border-input" type="number" ng-model="vm.job.numberOfEmployees">
+              <p class="normal">người</p>
+            </div>
+            <div class="inline" ng-show="checked">
+              <input class="inline small-input border-input" type="number" ng-model="vm.job.numberOfMales">
+              <p class="normal">nam</p>
+              <input class="inline small-input border-input" type="number" ng-model="vm.job.numberOfFemales">
+              <p class="normal">nữ</p>
+            </div>
+            <label ng-click="vm.setCustomEmployer(checked)">
+              <input class="margin-left" type="checkbox" ng-model="checked">Yêu cầu giới tính<br>
+            </label>
+          </div>
+        </div>
+        <div class="center error-text" ng-show="form.$invalid && form.$submitted">Vui lòng điền đầy đủ và chính xác thông tin</div>
+      </div>
+    </ion-content>
+  </form>
+  <ion-footer-bar>
+    <div class="bar bar-footer bar-positive nav-color" ng-click="vm.goCreatingInfo(form)">
+      <a class="footer-title title">Tiếp theo</a>
+    </div>
+  </ion-footer-bar>
+</ion-view>

@@ -1,0 +1,51 @@
+<ion-view class="">
+    <ion-header-bar align-title="center" class="bar-positive nav-color">
+        <button class="button button-clear" ng-click="vm.goBack()">
+            <i class="ion-chevron-left"></i>
+        </button>
+        <h1 class="title">Xác nhận công việc</h1>
+    </ion-header-bar>
+    <ion-content class="has-header client" scroll="true">
+        <div class="list list-inset margin-top5">
+            <div>
+                <h4>Công việc</h4>
+                <p class="confirm-text">{{vm.job.title}}</p>
+            </div>
+            <div class="margin-top2">
+                <h4>Nơi làm việc</h4>
+                <p class="confirm-text">{{vm.job.address}}</p>
+            </div>
+            <div class="margin-top2">
+                <h4>Ngày làm việc</h4>
+                <p class="confirm-text">Từ {{vm.job.startDate | date : 'dd/mm/yyyy'}} đến {{vm.job.endDate | date : 'dd/mm/yyyy'}}</p>
+            </div>
+            <div class="margin-top2">
+                <h4>Giờ làm việc</h4>
+                <p class="confirm-text">Từ {{vm.job.startTime | date : 'hh:mm'}} đến {{vm.job.endTime | date : 'hh:mm'}}</p>
+            </div>
+            <div class="margin-top2">
+                <h4>Số tiền</h4>
+                <p class="confirm-text">{{vm.job.earningPerDay}}</p>
+            </div>
+            <div class="margin-top2">
+                <h4>Hình thức thanh toán</h4>
+                <p class="confirm-text">{{vm.job.payment}}</p>
+            </div>
+            <div class="margin-top2">
+                <h4>Liên hệ</h4>
+                <p class="confirm-text">{{vm.job.contactName}} - {{vm.job.contactPhone}}</p>
+            </div>
+            <div class="margin-top2">
+                <h4>Số lượng người</h4>
+                <p class="confirm-text">{{vm.job.numberOfEmployees}} người ({{vm.job.numberOfMales}} nam, {{vm.job.numberOfFemales}} nữ)</p>
+            </div>
+            <div class="margin-top2 margin-bottom">
+                <h4>Chi tiết công việc</h4>
+                <p class="confirm-text">{{vm.job.description}}</p>
+            </div>
+        </div>
+    </ion-content>
+    <div class="bar bar-footer bar-positive nav-color">
+        <a ui-sref="work.workList" ng-click="vm.createJob()" class="title">Hoàn tất</a>
+    </div>
+</ion-view>

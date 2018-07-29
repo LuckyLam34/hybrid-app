@@ -1,0 +1,55 @@
+<div>
+  <ion-view class="appliedJobList">
+    <ion-header-bar align-title="center" class="bar-positive nav-color">
+      <button ng-click="vm.goBack()"><input class="menu-button" type="image" src="images/back_btn.png" /></button>
+      <h1 class="title">CÔNG VIỆC CỦA TÔI</h1>
+    </ion-header-bar>
+
+    <ion-content class="the-list work-list">
+      <div class="margin list list-inset">
+        <span ng-show="vm.appliedJobs.length < 1">Bạn chưa ứng tuyển công việc nào</span>
+        <div ng-class="item.status == 'waiting' ? 'item item-job waiting' : item.status == 'rejected' ? 'item item-job rejected' : item.status == 'approved' ? 'item item-job waiting approved' : 'item item-job'"
+          ng-repeat="item in vm.appliedJobs | orderBy:'-createDate'">
+          <div class="row title-header">
+            <div class="col job-title">
+              {{item.job.title}}
+
+              <span class="status">{{item.status | status}}</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col job-address">
+              <img class="img-marker" src="images/work/marker.png"> {{item.job.address}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col col-33">
+              <div class="job-salary">{{item.job.totalEarnings | number:0}}</div>
+              <div class="job-currency">VNĐ</div>
+            </div>
+            <div class="col job-description">
+              {{item.job.description}}
+            </div>
+          </div>
+          <div class="row job-footer">
+            <div class="col col-20 job-icon">
+              <img class="img-date" src="images/work/date_black.png">
+            </div>
+            <div class="col col-50">
+              <div class="job-date">{{item.job.startDate | date : 'dd/MM/yyyy'}}</div>
+              <div class="job-date">{{item.job.startTime | date: 'h:mm a'}} - {{item.job.endTime | date: 'h:mm a'}}</div>
+            </div>
+            <div class="col col-30">
+              <a ui-sref="work.workDetail({object: item.job})">
+                  <button class="button button-block job-button" ng-click="vm.goDetail(item.job)">
+                    CHI TIẾT
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ion-content>
+
+  </ion-view>
+</div>
